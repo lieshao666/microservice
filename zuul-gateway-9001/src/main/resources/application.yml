@@ -1,0 +1,40 @@
+server: 
+  port: 9001
+ 
+spring: 
+  application:
+    name: flashmarkets-zuul-gateway
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com:6002/eureka
+  instance:
+    instance-id: gateway-9001.com
+    prefer-ip-address: true         
+ 
+#1、zuul.routes.<route>.serviceId与zuul.routes.<route>.path
+#使用微服务名访问
+#http://zuul9001.com:9001/microservice-dept/dept/get/1
+ 
+#2、zuul.routes.<serviceId>=<path>
+#zuul:
+  #ignored-services: "*"
+  #prefix: /cssl
+  #忽略的路径(只要请求该路径就不被处理，也就是不能访问)
+  #ignored-patterns: /**/dept/get/**
+  #routes:
+    #microservice-dept: /mydept/**
+    #通过网关访问每次session不同
+    #mydept.sensitiveHeaders: "*"
+ 
+info:
+  app.name: cssl-microservice
+  company.name: www.cssl.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+zuul:
+  routes:
+    service-provider:
+      path: /consumer/**
+      serviceId: microservice-user

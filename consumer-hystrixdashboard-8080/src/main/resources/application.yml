@@ -1,0 +1,4 @@
+#http://127.1:8080/hystrix
+#http://被监控工程/hystrix.stream
+server:
+  port: 8080

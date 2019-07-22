@@ -1,0 +1,40 @@
+server:
+  port: 8002
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-cfg.xml
+  type-aliases-package: com.cssl.pojo
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+spring:
+  application:
+    name: microservice-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///mydb2
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      #defaultZone: http://eureka6001.com:6001/eureka
+      #Eureka服务器集群
+      defaultZone: http://eureka6001.com:6001/eureka/,http://eureka6002.com:6002/eureka/
+  instance:
+    instance-id: microservice-dept8002
+    prefer-ip-address: true     #访问路径可以显示IP地址
+    leaseRenewalIntervalInSeconds: 10  #租期更新时间间隔（默认30秒）
+    leaseExpirationDurationInSeconds: 30 #租期到期时间（默认90秒）
+
+info:
+  app.name: cssl-microservice
+  company.name: www.cssl.com
+  build.artifactId: microservice
+  build.version: 1.0-SNAPSHOT

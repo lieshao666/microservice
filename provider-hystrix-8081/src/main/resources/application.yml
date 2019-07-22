@@ -1,0 +1,38 @@
+#http://127.1:8081/hystrix.stream(火狐下载,goole浏览器不下载)
+server:
+  port: 8081
+  
+mybatis:
+  config-location: classpath:mybatis/mybatis-cfg.xml       
+  type-aliases-package: com.cssl.pojo    
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                     
+    
+spring:
+  application:
+    name: microservice-user
+  datasource:       # 当前数据源操作类型
+    driver-class-name: com.mysql.jdbc.Driver                # mysql驱动包
+    url: jdbc:mysql:///flashmarkets                                 # 数据库名称
+    username: root
+    password: 123
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+      
+eureka:
+  client: 
+    service-url:      
+      defaultZone: http://eureka6001.com:6001/eureka/,http://eureka6002.com:6002/eureka/
+  instance:
+    instance-id: microservice-dept8081-hystrix
+    prefer-ip-address: true     #访问路径可以显示IP地址     
+ 
+info: 
+  app.name: cssl-microservice
+  company.name: www.cssl.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+

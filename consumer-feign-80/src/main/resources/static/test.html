@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/test4" method="post">
+    用户ID：<input name="userId" type="text"><br/>
+    <input name="tijiao" type="submit" value="查询">
+</form>
+<h1 th:text="${session.user.getUserName()}"></h1>
+<a href="/getAll">显示所有用户</a>
+<h2 th:each="user:${session.users}" th:text="${user.getUserName()}"></h2>
+</body>
+</html>

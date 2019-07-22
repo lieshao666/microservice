@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/comm/comm.iml" filepath="$PROJECT_DIR$/comm/comm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer-feign-80/consumer-feign-80.iml" filepath="$PROJECT_DIR$/consumer-feign-80/consumer-feign-80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer-hystrixdashboard-8080/consumer-hystrixdashboard-8080.iml" filepath="$PROJECT_DIR$/consumer-hystrixdashboard-8080/consumer-hystrixdashboard-8080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-6001/eureka-6001.iml" filepath="$PROJECT_DIR$/eureka-6001/eureka-6001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-6002/eureka-6002.iml" filepath="$PROJECT_DIR$/eureka-6002/eureka-6002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice.iml" filepath="$PROJECT_DIR$/microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider-8001/provider-8001.iml" filepath="$PROJECT_DIR$/provider-8001/provider-8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider-8002/provider-8002.iml" filepath="$PROJECT_DIR$/provider-8002/provider-8002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider-hystrix-8081/provider-hystrix-8081.iml" filepath="$PROJECT_DIR$/provider-hystrix-8081/provider-hystrix-8081.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-gateway-9001/zuul-gateway-9001.iml" filepath="$PROJECT_DIR$/zuul-gateway-9001/zuul-gateway-9001.iml" />
+    </modules>
+  </component>
+</project>
